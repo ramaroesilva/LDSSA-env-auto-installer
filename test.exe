@@ -1,0 +1,26 @@
+cd "~/.virtualenvs/slu00/bin/test.exe"
+#activate
+#
+#cd $ppp
+#cd $(echo $ppp | sed -e 's/\\r//g')
+#
+#
+##folder="SLU01 - Pandas 101"
+##echo $folder
+#
+# 4th to 6th characters from folder name to define slu number
+##slu_N=${folder:3:2}
+#
+# create new environment
+##echo ~/.virtualenvs/slu$slu_N
+##python3 -m venv ~/.virtualenvs/slu$slu_N
+#
+# activate virtual environment
+##source ~/.virtualenvs/slu$slu_N/bin/activate
+#
+# updates pip
+##pip install -U pip
+#
+# installs requirements
+##python3 install -r /$folder/requirements.txt
+## rm -r ~/.virtualenvs/slu01
