@@ -57,7 +57,7 @@ for dir in */; do
 	if [ $situation = "already_exists" ] && [ $user_choice = "3" ]; then
 		echo "Argh! Then, why did you make me get out of bed?! Sayonara, baby."
 		
-		break
+		continue
 	fi
 	
 	# if environtment already exists and user only wants to run pip install requirements again.
@@ -69,7 +69,7 @@ for dir in */; do
 		echo "./$dir/requirements.txt"
 		pip install -r "./$dir/requirements.txt"
 		
-		exit
+		continue
 	fi
 
 	# the remaining options imply (re-)creating the virtual environtment.
