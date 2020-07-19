@@ -11,6 +11,15 @@
 
 # What the script does:
 # - iterates over each folder inside (one per SLU),
+# - from the folder name, takes the number "N" of the SLU,
+# - if the environment named "sluN" already exists, asks if the user wants to either:
+# 		1) remove the existing environment and re-create it (create + pip install - U pip + pip install requirements.txt),
+# 		2) only re-run the pip install requirements.txt, or
+# 		3) do nothing
+# - iterates over the next slu folder
+
+# What the script does:
+# - iterates over each folder inside (one per SLU),
 # - takes the number "N" of the SLU,
 # - creates and activates a virtual environment named "sluN"
 # - updates "pip" package
