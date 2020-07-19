@@ -13,12 +13,11 @@ To run it, go to command line (or wsl in Windows) and just write "directory/venv
 
 What the script does:
 - iterates over each folder inside (one per SLU),
-- takes the number "N" of the SLU,
-- creates and activates a virtual environment named "sluN"
-- updates "pip" package
-- installs "wheel" package (don't know why, but had to do this)
-- installs the packages from the requirements.txt in the iterated slu folder
-- deactivates newly created environment
+- from the folder name, takes the number "N" of the SLU,
+- if the environment named "sluN" already exists, asks if the user wants to either:
+    1) remove the existing environment and re-create it (create + pip install - U pip + pip install requirements.txt),
+    2) only re-run the pip install requirements.txt, or 
+    3) do nothing
 - iterates over the next slu folder
 
 Note: for Windows users (such as me) it is important to create Bash scripts in 
