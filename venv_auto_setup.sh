@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Bash script for creating the environments + installing packages in each 
 # requirements.txt file.
 
@@ -32,9 +34,9 @@ for dir in */; do
 	
 	# if virtual environment already exists
 	if [ ! -d ~/.virtualenvs/slu$slu_N ]; then
-		situation="1"
+		situation="does_not_exist"
 	else
-		situation="2"
+		situation="already_exists"
 		
 		echo "The virtual environment already seems to exist."
 		echo "Do you want for it to: (1) be removed and re-created, 2) run the pip install again, or 3) do nothing?"
@@ -43,14 +45,14 @@ for dir in */; do
 	fi
 		
 	# if environtment already exists and user wants to do nothing, be grumpy about it and stop running code.
-	if [ $situation = "2" ] && [ $user_choice = "3" ]; then
+	if [ $situation = "already_exists" ] && [ $user_choice = "3" ]; then
 		echo "Argh! Then, why did you make me get out of bed?! Sayonara, baby."
 		
 		break
 	fi
 	
 	# if environtment already exists and user only wants to run pip install requirements again.
-	if [ $situation = "2" ] && [ $user_choice = "2" ]; then
+	if [ $situation = "already_exists" ] && [ $user_choice = "2" ]; then
 		echo "Activating environment."
 		source ~/.virtualenvs/slu$slu_N/bin/activate
 		
@@ -64,7 +66,7 @@ for dir in */; do
 	# the remaining options imply (re-)creating the virtual environtment.
 	
 	# option 1: if virtual environment already exists and user chooses to re-create it
-	if [ $situation = "2" ] && [ $user_choice = "1" ]; then
+	if [ $situation = "does_not_exist" ] && [ $user_choice = "1" ]; then
 		echo "Deleting already existing environment."
 		rm -r ~/.virtualenvs/slu$slu_N
 	fi
