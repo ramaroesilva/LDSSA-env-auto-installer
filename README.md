@@ -1,5 +1,7 @@
 # LDSSA-env-auto-installer
 
+Bash script to automatically setup the virtual environments to run the Small Learning Units from the Lisbon Data Science Starters Academy
+
 (Copied from the .exe file comments)
 
 Bash script for creating the environments + installing packages in each 
