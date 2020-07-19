@@ -9,7 +9,7 @@ This .exe file should be placed inside the SXX folder (e.g. S01 - Bootcamp and B
 where all the SLU of a given month are placed.
 
 To run it, go to command line (or wsl in Windows) and just write "directory/venv_auto_setup.exe"
-# (or change the directory, with cd, to the SXX folder you want to look at and after that run " ./venv_auto_setup.exe"
+(or change the directory, with cd, to the SXX folder you want to look at and after that run " ./venv_auto_setup.exe"
 
 What the script does:
 - iterates over each folder inside (one per SLU),
